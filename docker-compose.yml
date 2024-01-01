@@ -48,7 +48,7 @@ services:
       - ./jmx-exporter:/usr/share/jmx_exporter/
 
   kafka-1:
-    image: confluentinc/cp-kafka:latest
+    image: confluentinc/cp-kafka:5.5.1
     hostname: kafka-1
     ports:
       - "19092:19092"
@@ -72,7 +72,7 @@ services:
       - ./jmx-exporter:/usr/share/jmx_exporter/
 
   kafka-2:
-    image: confluentinc/cp-kafka:latest
+    image: confluentinc/cp-kafka:5.5.1
     hostname: kafka-2
     ports:
       - "19093:19093"
@@ -96,7 +96,7 @@ services:
       - ./jmx-exporter:/usr/share/jmx_exporter/
 
   kafka-3:
-    image: confluentinc/cp-kafka:latest
+    image: confluentinc/cp-kafka:5.5.1
     hostname: kafka-3
     ports:
       - "19094:19094"
