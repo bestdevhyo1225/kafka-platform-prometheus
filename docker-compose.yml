@@ -47,6 +47,7 @@ services:
 
   kafka-1:
     image: confluentinc/cp-kafka:5.5.1
+    platform: linux/amd64 # m2 max에서 빌드시 활성화하기
     hostname: kafka-1
     ports:
       - "19092:19092"
@@ -71,6 +72,7 @@ services:
 
   kafka-2:
     image: confluentinc/cp-kafka:5.5.1
+    platform: linux/amd64 # m2 max에서 빌드시 활성화하기
     hostname: kafka-2
     ports:
       - "19093:19093"
@@ -95,6 +97,7 @@ services:
 
   kafka-3:
     image: confluentinc/cp-kafka:5.5.1
+    platform: linux/amd64 # m2 max에서 빌드시 활성화하기
     hostname: kafka-3
     ports:
       - "19094:19094"
@@ -234,6 +237,7 @@ services:
 
   kafka-lag-exporter:
     image: lightbend/kafka-lag-exporter:0.5.5
+    platform: linux/amd64 # m2 max에서 빌드시 활성화하기
     hostname: kafka-lag-exporter
     restart: always
     ports:
@@ -252,6 +256,7 @@ services:
 
   manager:
     image: hlebalbau/kafka-manager:stable
+    platform: linux/amd64 # m2 max에서 빌드시 활성화하기
     environment:
       ZK_HOSTS: "zookeeper-1:2181,zookeeper-2:2181,zookeeper-3:2181"
       APPLICATION_SECRET: "random-secret"
